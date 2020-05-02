@@ -11,7 +11,7 @@ export class MoviesPage implements OnInit {
 
   results: Observable<any>;
   searchTerm = '';
-  type: SearchType = SearchType.all; 
+  type: SearchType = SearchType.all;
 
   constructor(private movieService: MovieService) { }
 
@@ -21,9 +21,9 @@ export class MoviesPage implements OnInit {
   searchChanged() {
     this.results = this.movieService.searchData(this.searchTerm, this.type);
 
-    this.results.subscribe(res => {
-      
-    })
+    // this.results.subscribe(res => {
+
+    // })
   }
 
 }
